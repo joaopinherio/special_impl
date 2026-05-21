@@ -1,6 +1,6 @@
 package exercicio;
 
-public class DequeLinked implements MeuDeque<Object>{
+public class DequeLinked<T> implements MeuDeque<T>{
     private int tamanho;
     private Node<T> head;
     private Node<T> tail;
