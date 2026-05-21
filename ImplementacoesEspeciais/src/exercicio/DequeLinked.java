@@ -6,6 +6,7 @@ public class DequeLinked<T> implements MeuDeque<T>{
     private Node<T> tail;
     
 
+    
     @Override
     public boolean inserirInicio(T valor){
         Node<T> novo = new Node<T>(valor);
