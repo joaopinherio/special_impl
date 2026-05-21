@@ -19,6 +19,34 @@ public class DequeLinked implements MeuDeque<Object>{
         head = novo;
         return true;
     }
+
+    @Override
+    public boolean inserirFim(T valor){
+        return true;
+    }
+    
+    @Override
+    public T removerInicio(){
+        return T;
+    }
+
+    @Override
+    public T removerFim(){
+        return T;
+    }
+    @Override
+    public T consultarInicio(){
+        return T;
+    }
+    @Override
+    public T consultarFim(){
+        return T;
+    }
+
+    @Override
+    public int tamanho(){ 
+        return this.tamanho;
+    }
     
     class Node<T>{
         T data;
