@@ -2,14 +2,23 @@ package exercicio;
 
 public class DequeLinked<T> implements MeuDeque<T>{
     private int tamanho;
-    private Node<T> head;
-    private Node<T> tail;
+    private Node head;
+    private Node tail;
     
+    class Node<T>{
+        T data;
+        Node proximo;
+        
+        Node(T data){
+            this.data = data;
+            this.proximo = null;
+        }
+    }
 
     
     @Override
     public boolean inserirInicio(T valor){
-        Node<T> novo = new Node<T>(valor);
+        Node<Pessoa> novo = new Node(valor);
         if(head == null){
             head = novo;
             tail = novo;
@@ -41,7 +50,10 @@ public class DequeLinked<T> implements MeuDeque<T>{
     }
     @Override
     public T consultarFim(){
-        return T;
+        if(tail != null){
+            return tail;
+        }
+        return null;
     }
 
     @Override
@@ -49,13 +61,4 @@ public class DequeLinked<T> implements MeuDeque<T>{
         return this.tamanho;
     }
     
-    class Node<T>{
-        T data;
-        Node<T> proximo;
-        
-        Node(T data){
-            this.data = data;
-            this.proximo = null;
-        }
-    }
 }

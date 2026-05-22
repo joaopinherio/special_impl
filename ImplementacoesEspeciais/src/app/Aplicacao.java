@@ -19,6 +19,7 @@ public class Aplicacao {
         System.out.println("Dado do inicio: " + meuDeque.consultarInicio());
         System.out.println("Dado do fim: " + meuDeque.consultarFim());
         System.out.println("Tamanho: " + meuDeque.tamanho());
+        /*
         pessoa = new Pessoa("Pedro Souza", new Nascimento(12, 12, 2012));
         meuDeque.inserirFim(pessoa);
         System.out.println("Dado do inicio: " + meuDeque.consultarInicio());
@@ -35,6 +36,7 @@ public class Aplicacao {
             pessoa = meuDeque.removerInicio();
             System.out.println(pessoa);
         }
+            */
 
     }
 }
