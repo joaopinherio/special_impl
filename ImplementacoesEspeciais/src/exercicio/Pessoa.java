@@ -16,7 +16,7 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    class Nascimento{
+    public static class Nascimento{
         public int dia;
         public int mes;
         public int ano;
