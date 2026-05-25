@@ -5,7 +5,7 @@ public class DequeLinked<T> implements MeuDeque<T>{
     private Node head;
     private Node tail;
     
-    class Node<T>{
+    class Node{
         T data;
         Node proximo;
         
@@ -13,12 +13,20 @@ public class DequeLinked<T> implements MeuDeque<T>{
             this.data = data;
             this.proximo = null;
         }
+
+        public void proximo(Node valor){
+            this.proximo = valor;
+        }
+
+        public T getData(){
+            return this.data;
+        }
     }
 
     
     @Override
     public boolean inserirInicio(T valor){
-        Node<Pessoa> novo = new Node(valor);
+        Node novo = new Node(valor);
         if(head == null){
             head = novo;
             tail = novo;
@@ -32,6 +40,12 @@ public class DequeLinked<T> implements MeuDeque<T>{
 
     @Override
     public boolean inserirFim(T valor){
+        Node novo = new Node(valor);
+        if(head == null){
+            inserirInicio(valor);
+            return false;
+        }
+        tail.proximo(novo);
         return true;
     }
     
@@ -46,12 +60,15 @@ public class DequeLinked<T> implements MeuDeque<T>{
     }
     @Override
     public T consultarInicio(){
-        return T;
+        if(head != null){
+            return head.getData();
+        }
+        return null;
     }
     @Override
     public T consultarFim(){
         if(tail != null){
-            return tail;
+            return tail.getData();
         }
         return null;
     }
