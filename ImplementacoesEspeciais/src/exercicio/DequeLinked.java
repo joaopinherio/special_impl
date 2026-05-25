@@ -46,6 +46,8 @@ public class DequeLinked<T> implements MeuDeque<T>{
             return false;
         }
         tail.proximo(novo);
+        tail = novo;
+        tamanho++;
         return true;
     }
     
