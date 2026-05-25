@@ -14,8 +14,12 @@ public class DequeLinked<T> implements MeuDeque<T>{
             this.proximo = null;
         }
 
-        public void proximo(Node valor){
+        public void setProximo(Node valor){
             this.proximo = valor;
+        }
+
+        public Node getProximo(){
+            return proximo;
         }
 
         public T getData(){
@@ -35,6 +39,7 @@ public class DequeLinked<T> implements MeuDeque<T>{
         }
         novo.proximo = head;
         head = novo;
+        tamanho++;
         return true;
     }
 
@@ -45,7 +50,7 @@ public class DequeLinked<T> implements MeuDeque<T>{
             inserirInicio(valor);
             return false;
         }
-        tail.proximo(novo);
+        tail.setProximo(novo);
         tail = novo;
         tamanho++;
         return true;
@@ -53,12 +58,18 @@ public class DequeLinked<T> implements MeuDeque<T>{
     
     @Override
     public T removerInicio(){
-        return T;
+        if(head == null){
+            return null;
+        }
+        tamanho--;
+        Node aux = head;
+        head = head.getProximo();
+        return aux.getData();
     }
 
     @Override
     public T removerFim(){
-        return T;
+        return null;
     }
     @Override
     public T consultarInicio(){
